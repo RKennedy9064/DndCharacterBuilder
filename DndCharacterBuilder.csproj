@@ -11,6 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Areas\Admin\Races\Pages\" />
     <Folder Include="wwwroot\images\" />
   </ItemGroup>
 
