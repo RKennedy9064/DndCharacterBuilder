@@ -1,0 +1,48 @@
+﻿@page
+@model LoginModel
+@{
+    ViewData["Title"] = "Login";
+}
+<div class="row justify-content-center mt-2">
+    <div class="col-6">
+        <div class="card">
+            <h2 class="card-header">
+                Login
+            </h2>
+            <div class="card-body">
+                <form method="post">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="form-group">
+                        <label asp-for="Input.Email">
+                            Email
+                        </label>
+                        <input asp-for="Input.Email" type="email" placeholder="Email" class="form-control" />
+                        <span asp-validation-for="Input.Email" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Input.Password">
+                            Password
+                        </label>
+                        <input asp-for="Input.Password" type="password" placeholder="Password" class="form-control" />
+                        <span asp-validation-for="Input.Password" class="text-danger"></span>
+                    </div>
+                    <div class="form-check">
+                        <input asp-for="Input.RememberMe" type="checkbox" class="form-check-input"/>
+                        <label asp-for="Input.RememberMe" class="form-check-label">
+                            Remember Me
+                        </label>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">
+                        Login
+                    </button>
+                    <hr />
+                    <div class="text-center">
+                        <a asp-page="Register" asp-area="Account">
+                            Create a free account
+                        </a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
